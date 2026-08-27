@@ -1,10 +1,14 @@
 package com.matheus.workshopmongo.domain;
 
-import java.io.Serializable;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Objects;
 
-public class User implements Serializable {
+@Document(collection = "user")
+public class User {
 
+    @Id
     private String id;
     private String name;
     private String email;
